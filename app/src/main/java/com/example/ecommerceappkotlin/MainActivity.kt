@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             var myEditor = sharedP?.edit()
 
             myEditor?.putString("product_name",edtProduct.text.toString())
-            myEditor?.commit()
+            myEditor?.apply()
 
             Toast.makeText(this@MainActivity, "Product saved successfully",Toast.LENGTH_SHORT).show()
         }
