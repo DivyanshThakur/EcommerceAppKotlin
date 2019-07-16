@@ -16,7 +16,7 @@ class ShowJsonObjectActivity : AppCompatActivity() {
         setContentView(R.layout.activity_show_json_object)
 
         btnSubmit.setOnClickListener {
-            val productURL : String = "http://192.168.43.186/PHPTest/test_file.php?id=" + edtProductId.text.toString()
+            val productURL : String = "http://192.168.43.186/Ecommerce/present_json.php?id=" + edtProductId.text.toString()
             val requestQ : RequestQueue = Volley.newRequestQueue(this@ShowJsonObjectActivity)
 
             val jsonOR = JsonObjectRequest(Request.Method.GET, productURL, null, Response.Listener { response ->
