@@ -1,7 +1,9 @@
 package com.example.ecommerceappkotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.Response
@@ -32,6 +34,11 @@ class ShowJsonObjectActivity : AppCompatActivity() {
 
             requestQ.add(jsonOR)
 
+        }
+
+        button.setOnClickListener {
+            val intent = Intent(this,GetAllJSONObjectActivity::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.ecommerceappkotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.android.volley.Request
@@ -43,6 +44,12 @@ class GetAllJSONObjectActivity : AppCompatActivity() {
             requestQ.add(jsonAR)
 
 
+        }
+
+        button2.setOnClickListener {
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }
