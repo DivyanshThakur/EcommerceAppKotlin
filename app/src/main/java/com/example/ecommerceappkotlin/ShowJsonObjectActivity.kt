@@ -35,10 +35,5 @@ class ShowJsonObjectActivity : AppCompatActivity() {
             requestQ.add(jsonOR)
 
         }
-
-        button.setOnClickListener {
-            val intent = Intent(this,GetAllJSONObjectActivity::class.java)
-            startActivity(intent)
-        }
     }
 }

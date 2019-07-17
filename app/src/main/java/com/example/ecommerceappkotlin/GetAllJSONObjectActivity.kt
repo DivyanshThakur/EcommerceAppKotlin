@@ -1,6 +1,5 @@
 package com.example.ecommerceappkotlin
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.android.volley.Request
@@ -30,7 +29,7 @@ class GetAllJSONObjectActivity : AppCompatActivity() {
                     val pn = response.getJSONObject(productIndex).getString("name")
                     val pp = response.getJSONObject(productIndex).getInt("price")
 
-                    allProducts += "$pn - $pp/n"
+                    allProducts += "$pn - $pp\n"
                 }
 
                 txtClick.text = allProducts
@@ -43,13 +42,6 @@ class GetAllJSONObjectActivity : AppCompatActivity() {
 
             requestQ.add(jsonAR)
 
-
-        }
-
-        button2.setOnClickListener {
-            val intent = Intent(this,MainActivity::class.java)
-            startActivity(intent)
-            finish()
         }
     }
 }

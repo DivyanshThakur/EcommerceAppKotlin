@@ -1,6 +1,5 @@
 package com.example.ecommerceappkotlin
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.android.volley.Request
@@ -27,14 +26,6 @@ class MainActivity : AppCompatActivity() {
             })
 
            requestQ.add(stringRequest)
-
-        }
-
-        btnNext.setOnClickListener {
-
-            val intent = Intent(this,ShowJsonObjectActivity::class.java)
-            startActivity(intent)
-
 
         }
 
