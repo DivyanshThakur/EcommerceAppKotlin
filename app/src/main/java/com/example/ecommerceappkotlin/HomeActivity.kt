@@ -41,7 +41,7 @@ class HomeActivity : AppCompatActivity() {
 
         btnRecyclerView.setOnClickListener {
 
-            val intent = Intent(this,GetAllJSONObjectActivity::class.java)
+            val intent = Intent(this,RvActivity::class.java)
             startActivity(intent)
         }
 
