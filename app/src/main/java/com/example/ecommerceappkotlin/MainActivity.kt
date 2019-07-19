@@ -15,20 +15,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnGet.setOnClickListener {
-
-            val serverURL = "http://192.168.43.186/PHPTest/test_file.php"
-            val requestQ : RequestQueue = Volley.newRequestQueue(this@MainActivity)
-            val stringRequest = StringRequest(Request.Method.GET, serverURL, Response.Listener { response ->
-                txtData.text = response
-            },Response.ErrorListener { error ->
-                txtData.text = error.message
-            })
-
-           requestQ.add(stringRequest)
-
-        }
-
     }
 
 }
