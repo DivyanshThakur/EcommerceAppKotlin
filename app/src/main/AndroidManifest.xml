@@ -12,22 +12,14 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true">
-        <activity android:name=".RvActivity">
+        <activity android:name=".SignUpActivity">
         </activity>
-        <activity android:name=".HomeActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-        <activity android:name=".ImageDownloader">
-        </activity>
-        <activity android:name=".GetAllJSONObjectActivity">
-        </activity>
-        <activity android:name=".ShowJsonObjectActivity">
-        </activity>
-        <activity android:name=".MainActivity">
         </activity>
     </application>
 
