@@ -27,7 +27,7 @@ class HomeScreen : AppCompatActivity() {
                     brandsList.add(response.getJSONObject(jsonObject).getString("brand"))
                 }
 
-                var brandsListAdapter = ArrayAdapter(this@HomeScreen, android.R.layout.simple_list_item_1, brandsList)
+                var brandsListAdapter = ArrayAdapter(this@HomeScreen, R.layout.brand_item_text_view, brandsList)
                 brandsListView.adapter = brandsListAdapter
 
             },
