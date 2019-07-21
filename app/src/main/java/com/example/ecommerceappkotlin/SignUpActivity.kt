@@ -27,14 +27,16 @@ class SignUpActivity : AppCompatActivity() {
 
                 val signUpURL = "http://192.168.43.186/OnlineStoreApp/index.php?email=" + edtSignUpEmail.text.toString() + "&username=" + edtSignUpUsername.text.toString() + "&pass=" + edtSignUpPassword.text.toString()
 
-                val requestQ = Volley.newRequestQueue(this)
+                val requestQ = Volley.newRequestQueue(this@SignUpActivity)
 
                 val stringRequest = StringRequest(Request.Method.GET, signUpURL, Response.Listener { response ->
 
-                    if (response.equals("A user with this Email Address already exists")) {
+                    if (response.equals("A user with this Email Address already exist")) {
                         dialogBuilder!!.setTitle("Error").setMessage(response).create().show()
-                    } else {
+                    } else if (response.equals("Congratulations! The registration process was successful")) {
                         dialogBuilder!!.setTitle("Success").setMessage(response).create().show()
+                    } else {
+                        dialogBuilder!!.setTitle("Error").setMessage(response).create().show()
                     }
 
 

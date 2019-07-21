@@ -23,7 +23,6 @@
               android:hint="E-mail"
               android:ems="10"
               android:inputType="textEmailAddress"
-              android:textColor="#fff"
               android:id="@+id/edtLogInEmail"
     />
 
@@ -34,7 +33,6 @@
               android:hint="Password"
               android:ems="10"
               android:inputType="textPassword"
-              android:textColor="#fff"
               android:id="@+id/edtLogInPassword"
     />
     <Button android:layout_width="match_parent" android:layout_height="wrap_content"
