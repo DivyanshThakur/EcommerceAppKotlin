@@ -29,6 +29,9 @@ class MainActivity : AppCompatActivity() {
 
                 if (response.equals("The user does exist")) {
                     Toast.makeText(this, response, Toast.LENGTH_SHORT).show()
+
+                    val homeIntent = Intent(this@MainActivity, HomeScreen::class.java)
+                    startActivity(homeIntent)
                 } else {
                     dialogBuilder!!.setTitle("Alert").setMessage(response).create().show()
                 }

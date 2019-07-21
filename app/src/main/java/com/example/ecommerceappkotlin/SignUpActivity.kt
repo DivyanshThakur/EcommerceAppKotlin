@@ -1,7 +1,9 @@
 package com.example.ecommerceappkotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.android.volley.Request
 import com.android.volley.Response
@@ -34,7 +36,11 @@ class SignUpActivity : AppCompatActivity() {
                     if (response.equals("A user with this Email Address already exist")) {
                         dialogBuilder!!.setTitle("Error").setMessage(response).create().show()
                     } else if (response.equals("Congratulations! The registration process was successful")) {
-                        dialogBuilder!!.setTitle("Success").setMessage(response).create().show()
+
+                        Toast.makeText(this@SignUpActivity, response, Toast.LENGTH_SHORT).show()
+                        val homeIntent = Intent(this@SignUpActivity, HomeScreen::class.java)
+                        startActivity(homeIntent)
+
                     } else {
                         dialogBuilder!!.setTitle("Error").setMessage(response).create().show()
                     }
