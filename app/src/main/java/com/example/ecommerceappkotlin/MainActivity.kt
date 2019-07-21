@@ -28,6 +28,9 @@ class MainActivity : AppCompatActivity() {
             val stringRequest = StringRequest(Request.Method.GET, logInURL, Response.Listener { response ->
 
                 if (response.equals("The user does exist")) {
+
+                    Person.email = edtLogInEmail.text.toString()
+
                     Toast.makeText(this, response, Toast.LENGTH_SHORT).show()
 
                     val homeIntent = Intent(this@MainActivity, HomeScreen::class.java)

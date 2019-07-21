@@ -37,6 +37,8 @@ class SignUpActivity : AppCompatActivity() {
                         dialogBuilder!!.setTitle("Error").setMessage(response).create().show()
                     } else if (response.equals("Congratulations! The registration process was successful")) {
 
+                        Person.email = edtSignUpEmail.text.toString()
+
                         Toast.makeText(this@SignUpActivity, response, Toast.LENGTH_SHORT).show()
                         val homeIntent = Intent(this@SignUpActivity, HomeScreen::class.java)
                         startActivity(homeIntent)
