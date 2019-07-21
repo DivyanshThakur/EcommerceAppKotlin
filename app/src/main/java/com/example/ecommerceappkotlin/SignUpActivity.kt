@@ -27,7 +27,9 @@ class SignUpActivity : AppCompatActivity() {
 
                 // Registration process
 
-                val signUpURL = "http://192.168.43.186/OnlineStoreApp/index.php?email=" + edtSignUpEmail.text.toString() + "&username=" + edtSignUpUsername.text.toString() + "&pass=" + edtSignUpPassword.text.toString()
+                val signUpURL = "http://192.168.43.186/OnlineStoreApp/join_new_user.php?email=" +
+                        edtSignUpEmail.text.toString() + "&username=" + edtSignUpUsername.text.toString() +
+                        "&pass=" + edtSignUpPassword.text.toString()
 
                 val requestQ = Volley.newRequestQueue(this@SignUpActivity)
 
