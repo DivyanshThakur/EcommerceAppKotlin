@@ -1,5 +1,6 @@
 package com.example.ecommerceappkotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -39,6 +40,17 @@ class HomeScreen : AppCompatActivity() {
         })
 
         requestQ.add(jsonAR)
+
+
+        brandsListView.setOnItemClickListener { adapterView, view, i, l ->
+
+            val tappedBrand = brandsList.get(i)
+
+            val intent = Intent(this@HomeScreen, FetchEProductsActivity::class.java)
+            intent.putExtra("BRAND", tappedBrand)
+            startActivity(intent)
+
+        }
 
     }
 }
