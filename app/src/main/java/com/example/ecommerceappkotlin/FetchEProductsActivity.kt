@@ -23,14 +23,12 @@ class FetchEProductsActivity : AppCompatActivity() {
 
         var productsList = ArrayList<EProduct>()
 
-        val productsURL = "http://192.168.43.183/OnlineStoreApp/fetch_eproducts.php?brand=$selectedBrands"
+        val productsURL = "http://192.168.43.186/OnlineStoreApp/fetch_eproducts.php?brand=$selectedBrands"
 
        val requestQ = Volley.newRequestQueue(this)
 
         val jsonAR = JsonArrayRequest(Request.Method.GET, productsURL, null, Response.Listener {
             response ->
-
-
 
             for (jsonObject in 0.until(response.length()))
             productsList.add(EProduct(response.getJSONObject(jsonObject).getInt("id"),
@@ -46,7 +44,7 @@ class FetchEProductsActivity : AppCompatActivity() {
 
         }, Response.ErrorListener { error ->
             val alertDialog = AlertDialog.Builder(this@FetchEProductsActivity)
-            alertDialog.setTitle("Error").setMessage(error.message).create().show()
+            alertDialog.setTitle(error.message).setMessage(error.message).create().show()
         })
 
         requestQ.add(jsonAR)
