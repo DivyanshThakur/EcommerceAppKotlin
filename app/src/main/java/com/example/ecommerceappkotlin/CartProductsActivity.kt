@@ -62,8 +62,6 @@ class CartProductsActivity : AppCompatActivity() {
         if (item.itemId == R.id.continueShoppingItem) {
             var intent = Intent(this@CartProductsActivity, HomeScreen::class.java)
             startActivity(intent)
-        } else if (item.itemId == R.id.verifyItem) {
-
         } else if (item.itemId == R.id.canceltem) {
             var deleteUrl = "http://192.168.43.186/OnlineStoreApp/decline_order.php?email=${Person.email}"
 
