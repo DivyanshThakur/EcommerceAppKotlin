@@ -19,7 +19,7 @@ import java.math.BigDecimal
 
 class FinallizeShoppingActivity : AppCompatActivity() {
 
-    var ttPrice : Long = 0
+    private var ttPrice : Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
